@@ -13,10 +13,18 @@ router.post('/', checkAuth, async (request, response) => {
         .json(task);
 });
 
-router.get('/', (request, response) => {
-    response.status(200).json({
-      message: 'Handling GET requests to /entregas'
-    });
-   });   
+router.get('/', async (request, response) => {
+    const tasks = await TaskService.getAll();
+    tasks && tasks.length
+    ? response.json(tasks)
+    : response.status(204).end();
+});
+
+router.get('/:taskId', async (request,response) => {
+    const task = await TaskService.getById(request.params.taskId);
+    task
+    ? response.json(task)
+    : notFound(request, response);
+});
 
 module.exports = router;
