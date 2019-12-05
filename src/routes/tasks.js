@@ -27,4 +27,14 @@ router.get('/:taskId', async (request,response) => {
     : notFound(request, response);
 });
 
+router.patch('/:taskId', async (request, response) => {
+    const updatedTask = await TaskService.update(
+      request.params.taskId,
+      request.body
+    );
+    updatedTask
+      ? response.json(updatedTask)
+      : notFound(request, response);
+  });
+  
 module.exports = router;

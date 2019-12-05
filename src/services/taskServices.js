@@ -34,19 +34,25 @@ class TaskService {
             resolve(db[id]);
         });
     }
-
-    static update(taskId, updatedTask) {
-        return new Promise(async (resolve) => {
-            const task = await TaskService.getById(taskId);
-            if(task) {
-                const hasValue = updatedTask.done != null;
-                task.done = hasValue ? updatedTask.done : task.done;
-                task.description = updatedTask.description || task.description;
-                resolve(task);
-            }
-            resolve(null);
-        });
-    }
+    
+  static update(taskId, updatedTask) {
+    return new Promise(async (resolve) => {
+      const task = await TaskService.getById(taskId);
+      if(task) {
+        const hasValue = updatedTask.recebedorisComprador != null;
+        task.recebedorisComprador = hasValue ? updatedTask.recebedorisComprador : task.recebedorisComprador;
+        
+        task.idPedido = updatedTask.idPedido || task.idPedido,
+        task.idCliente = updatedTask.idCliente || task.idCliente,
+        task.nome = updatedTask.nome || task.nome,
+        task.cpf = updatedTask.cpf || task.cpf,
+        task.data = updatedTask.data || task.data,
+        task.localizacao = updatedTask.localizacao || task.localizacao
+        resolve(task);
+      }
+      resolve(null);
+    })
+  }
 
     static delete(id) {
         return new Promise((resolve) => {
