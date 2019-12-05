@@ -12,7 +12,7 @@ class TaskService {
                 idCliente: newTask.idCliente,
                 nome: newTask.nome,
                 cpf: newTask.cpf,
-                recebedorisComprador: newTask.recebedorisComprador || false,
+                recebedorIsComprador: newTask.recebedorIsComprador || false,
                 data: newTask.data,
                 localizacao: newTask.localizacao
             }
@@ -39,9 +39,9 @@ class TaskService {
     return new Promise(async (resolve) => {
       const task = await TaskService.getById(taskId);
       if(task) {
-        const hasValue = updatedTask.recebedorisComprador != null;
-        task.recebedorisComprador = hasValue ? updatedTask.recebedorisComprador : task.recebedorisComprador;
-        
+        const hasValue = updatedTask.recebedorIsComprador != null;
+        task.recebedorIsComprador = hasValue ? updatedTask.recebedorIsComprador : task.recebedorIsComprador;
+
         task.idPedido = updatedTask.idPedido || task.idPedido,
         task.idCliente = updatedTask.idCliente || task.idCliente,
         task.nome = updatedTask.nome || task.nome,

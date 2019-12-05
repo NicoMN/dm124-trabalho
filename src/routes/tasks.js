@@ -36,5 +36,12 @@ router.patch('/:taskId', async (request, response) => {
       ? response.json(updatedTask)
       : notFound(request, response);
   });
-  
+
+  router.delete('/:taskId', async (request,response) => {
+    const isDeleted = await TaskService.delete(request.params.taskId);
+    isDeleted
+        ? response.end()
+        : notFound(request, response);
+});
+
 module.exports = router;
