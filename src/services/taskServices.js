@@ -8,8 +8,13 @@ class TaskService {
         return new Promise((resolve) => {
             const task = {
                 id: ++sequence,
-                done: newTask.done || false,
-                description: newTask.description
+                idPedido: newTask.idPedido,
+                idCliente: newTask.idCliente,
+                nome: newTask.nome,
+                cpf: newTask.cpf,
+                recebedorisComprador: newTask.recebedorisComprador || false,
+                data: newTask.data,
+                localizacao: newTask.localizacao
             }
             db[task.id] = task;
             resolve(task);
