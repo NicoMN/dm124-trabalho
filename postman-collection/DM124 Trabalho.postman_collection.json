@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "93d837f8-2a08-4afd-b73b-82bddf2fe921",
+		"name": "DM124 Trabalho",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Entregas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5c76154-2a9a-4c2b-ae73-60bad2607a54",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "alunoinatel",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dm124",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dm124-trabalho.herokuapp.com/entregas/",
+					"protocol": "https",
+					"host": [
+						"dm124-trabalho",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"entregas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Entregas by Id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "alunoinatel",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dm124",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dm124-trabalho.herokuapp.com/entregas/1",
+					"protocol": "https",
+					"host": [
+						"dm124-trabalho",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"entregas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Entregas",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "alunoinatel",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dm124",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"idPedido\": 22,\r\n\t\"idCliente\": 44,\r\n\t\"nome\": \"Joao Carlos\",\r\n\t\"cpf\": \"123456\",\r\n    \"recebedorIsComprador\": true,\r\n    \"data\": \"12/05/2019 15:05\",\r\n    \"localizacao\": \"4524234.11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dm124-trabalho.herokuapp.com/entregas/",
+					"protocol": "https",
+					"host": [
+						"dm124-trabalho",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"entregas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Entregas",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "alunoinatel",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dm124",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"idPedido\": 99,\r\n\t\"idCliente\": 77,\r\n\t\"nome\": \"Mauricio\",\r\n\t\"cpf\": \"87878787\",\r\n    \"recebedorIsComprador\": false,\r\n    \"data\": \"22/08/2020 21:30\",\r\n    \"localizacao\": \"24231794.32\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dm124-trabalho.herokuapp.com/entregas/1",
+					"protocol": "https",
+					"host": [
+						"dm124-trabalho",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"entregas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Entregas",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "alunoinatel",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dm124",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dm124-trabalho.herokuapp.com/entregas/2",
+					"protocol": "https",
+					"host": [
+						"dm124-trabalho",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"entregas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
