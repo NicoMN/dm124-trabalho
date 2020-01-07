@@ -1,0 +1,5 @@
+URL da aplicação: https://dashboard.heroku.com/apps/dm124-trabalho
+
+A pasta postman-collection contem um arquivo para importar para o Postman com todos os métodos CRUD que a aplicação suporta.
+
+As credenciais para o Postman são as mesmas utilizadas durante a aplicação exemplo da aula;
